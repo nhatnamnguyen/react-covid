@@ -1,14 +1,14 @@
 import React from 'react'
 
 interface Iprops {
-    type: String
+    type: String,
+    count: number
 }
 
 function GlobalItem(props: Iprops) {
     return (
         <div>
-            <div>Global Item</div>
-            <div>Type {props.type}</div>
+            <div>{props.type} : {props.count}</div>
         </div>
     )
 }
