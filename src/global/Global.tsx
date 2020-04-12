@@ -18,10 +18,10 @@ function Global() {
 
     return (
         <div>
-            <label>Global CoronaVirus Information</label>
-            <GlobalItem type='Case' count={globalResult.cases}/>
-            <GlobalItem type='Death' count={globalResult.deaths}/>
-            <GlobalItem type='Recovered' count={globalResult.recovered}/>
+            <label>Global Corona-19 Information</label>
+            <GlobalItem type='Cases' style='case' count={globalResult.cases}/>
+            <GlobalItem type='Deaths' style='death' count={globalResult.deaths}/>
+            <GlobalItem type='Recovered' style='recovered' count={globalResult.recovered}/>
         </div>
     )
 }

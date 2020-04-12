@@ -1,14 +1,15 @@
 import React from 'react'
 
 interface Iprops {
-    type: String,
+    type: string,
+    style: string
     count: number
 }
 
 function GlobalItem(props: Iprops) {
     return (
         <div>
-            <div>{props.type} : {props.count}</div>
+            <div>{props.type} : <span className={props.style}>{props.count}</span></div>
         </div>
     )
 }

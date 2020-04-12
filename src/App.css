@@ -28,6 +28,19 @@
   color: #61dafb;
 }
 
+.small {
+  font-size: calc(7px + 2vmin);
+}
+.case {
+  color: rgb(189, 33, 48);
+}
+.death {
+  color: rgb(189, 189, 189);
+}
+.recovered {
+  color: rgb(164, 201, 57);
+}
+
 @keyframes App-logo-spin {
   from {
     transform: rotate(0deg);
