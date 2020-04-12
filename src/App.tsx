@@ -1,6 +1,8 @@
 import React from 'react';
 import logo from './logo.svg';
 import './App.css';
+import Global from './global/Global';
+import Country from './country/Country';
 
 function App() {
   return (
@@ -19,6 +21,8 @@ function App() {
           Learn React
         </a>
       </header>
+      <Global/>
+      <Country />
     </div>
   );
 }
