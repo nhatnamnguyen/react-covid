@@ -19,9 +19,9 @@ function Global() {
     return (
         <div>
             <label>Global Corona-19</label>
-            <GlobalItem type='Cases' style='case' count={globalResult.cases}/>
-            <GlobalItem type='Deaths' style='death' count={globalResult.deaths}/>
-            <GlobalItem type='Recovered' style='recovered' count={globalResult.recovered}/>
+            <GlobalItem type='Cases' withStyle='case' count={globalResult.cases}/>
+            <GlobalItem type='Deaths' withStyle='death' count={globalResult.deaths}/>
+            <GlobalItem type='Recovered' withStyle='recovered' count={globalResult.recovered}/>
         </div>
     )
 }
