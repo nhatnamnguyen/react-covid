@@ -17,7 +17,7 @@ function Global() {
     }, []);
 
     return (
-        <div>
+        <div className="App App-header">
             <label>Global Corona-19</label>
             <GlobalItem type='Cases' withStyle='case' count={globalResult.cases}/>
             <GlobalItem type='Deaths' withStyle='death' count={globalResult.deaths}/>
