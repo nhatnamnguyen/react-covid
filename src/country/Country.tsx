@@ -27,7 +27,7 @@ function Country() {
             </div>
         );
     return (
-        <div className="App App-header">
+        <div>
             {listItems}
         </div>
     )
