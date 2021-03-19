@@ -1,11 +1,11 @@
 import React, { useState, useEffect } from 'react'
 import CountryItem from './CountryItem'
 import SearchBar from './SearchBar'
-import {fetchCountries} from '../service/CovidService'
+import { fetchCountries } from '../service/CovidService'
 
 function Country() {
 
-    const [countryResults, setCountryResults] = useState([{country: '', cases: 0, deaths: 0, recovered: 0 }])
+    const [countryResults, setCountryResults] = useState([{ country: '', cases: 0, deaths: 0, recovered: 0 }])
     const [searchText, setSearchText] = useState('')
 
     useEffect(() => {
@@ -18,7 +18,7 @@ function Country() {
 
     const listItems = countryResults
         .filter(countryResult => {
-            return countryResult.country !== 'Total:' 
+            return countryResult.country !== 'Total:'
                 && countryResult.country !== ''
                 && countryResult.country !== 'World'
                 && countryResult.country.toLowerCase().includes(searchText.toLowerCase())

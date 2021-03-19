@@ -1,26 +1,31 @@
+import axios from "axios";
+
 const COVID_URL_BASE = 'https://coronavirus-19-api.herokuapp.com'
 const GLOBAL_PATH = "/all"
 const COUNTRIES_PATH = "/countries"
 
+const instance = axios.create({
+    baseURL: COVID_URL_BASE
+})
 
 function fetchGlobal(callback: any): void {
-    fetch(COVID_URL_BASE + GLOBAL_PATH)
-        .then((response) => {
-            return response.json();
-        })
-        .then((json) => {
-            callback(json)
-        })
+    instance({ 
+        method: "GET",
+        url: GLOBAL_PATH
+    })
+    .then(response => {
+        callback(response.data)
+    })
 }
-
 
 function fetchCountries(callback: any): void {
-    fetch(COVID_URL_BASE + COUNTRIES_PATH)
-        .then(response => {
-            return response.json()
-        }).then(json => {
-            callback(json)
-        })
+    instance({
+        method: "GET",
+        url: COUNTRIES_PATH
+    })
+    .then(response => {
+        callback(response.data)
+    })
 }
 
-export {fetchGlobal, fetchCountries}
+export { fetchGlobal, fetchCountries }
