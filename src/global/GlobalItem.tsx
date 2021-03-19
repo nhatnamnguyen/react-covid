@@ -9,7 +9,7 @@ interface Iprops {
 function GlobalItem(props: Iprops) {
     return (
         <div>
-            <div>{props.type} : <span className={props.withStyle}>{props.count}</span></div>
+            <div>{props.type} : <span className={props.withStyle}>{props.count.toLocaleString()}</span></div>
         </div>
     )
 }
