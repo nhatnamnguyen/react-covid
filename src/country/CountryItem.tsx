@@ -5,12 +5,11 @@ interface IProps {
     case: number,
     death: number,
     recovered: number
-
 }
 
 function CountryItem(props: IProps) {
     return (
-        <div>
+        <div className='country-item'>
             <div>{props.countryName}</div>
             <div className='small'>Cases: <span className='case'>{props.case}</span></div>
             <div className='small'>Deaths: <span className='death'>{props.death}</span></div>

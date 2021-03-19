@@ -8,6 +8,10 @@
   color: #757575;
 }
 
+.country-item {
+  margin-bottom: 30px;
+}
+
 .small {
   font-size: calc(15px + 2vmin);
 }

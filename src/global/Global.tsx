@@ -11,7 +11,6 @@ function Global() {
           return response.json();
         })
         .then((data) => {
-            console.log('Data: ' + data);
             setGlobalResult(data)
         });
     }, []);

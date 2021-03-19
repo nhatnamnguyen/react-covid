@@ -10,7 +10,6 @@ function Country() {
             .then(response => {
                 return response.json()
             }).then(data => {
-                console.log("data: " + data)
                 setCountryResults(data)
             })
     }, [])
@@ -21,10 +20,7 @@ function Country() {
                 && countryResult.country !== ''
                 && countryResult.country !== 'World'                
         }).map((countryResult) =>
-            <div>
-                <CountryItem countryName={countryResult.country} case={countryResult.cases} death={countryResult.deaths} recovered={countryResult.recovered} />
-                <p></p>
-            </div>
+            <CountryItem key={countryResult.country} countryName={countryResult.country} case={countryResult.cases} death={countryResult.deaths} recovered={countryResult.recovered} />
         );
     return (
         <div>
