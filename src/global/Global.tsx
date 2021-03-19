@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react'
+import {fetchGlobal} from '../service/CovidService';
 import GlobalItem from './GlobalItem'
 
 function Global() {
@@ -6,13 +7,7 @@ function Global() {
     const [globalResult, setGlobalResult] = useState({cases: 0, deaths: 0, recovered: 0})
 
     useEffect(() => {
-        fetch('https://coronavirus-19-api.herokuapp.com/all')
-        .then((response) => {
-          return response.json();
-        })
-        .then((data) => {
-            setGlobalResult(data)
-        });
+        fetchGlobal(setGlobalResult)
     }, []);
 
     return (

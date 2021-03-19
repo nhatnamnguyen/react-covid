@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react'
 import CountryItem from './CountryItem'
 import SearchBar from './SearchBar'
+import {fetchCountries} from '../service/CovidService'
 
 function Country() {
 
@@ -8,12 +9,7 @@ function Country() {
     const [searchText, setSearchText] = useState('')
 
     useEffect(() => {
-        fetch('https://coronavirus-19-api.herokuapp.com/countries')
-            .then(response => {
-                return response.json()
-            }).then(data => {
-                setCountryResults(data)
-            })
+        fetchCountries(setCountryResults)
     }, [])
 
     function onSearchChange(e: any) {
